@@ -13,7 +13,7 @@ def getAllCampingLinks(checkin, checkout):
   soup = bs(resp.text, 'lxml')
 
   unedited_links = soup.find_all("a", {"data-testid": "title-link"}, href = True)
-  #unedited_links = unedited_links[:3] # prende i primi 3 camping per la demo
+  unedited_links = unedited_links[:3] # prende i primi 3 camping per la demo
 
   urls = []
   for link in unedited_links:
